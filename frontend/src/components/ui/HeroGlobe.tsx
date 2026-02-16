@@ -56,7 +56,6 @@ const Hotspot = ({ position, label }: { position: [number, number, number], labe
                 position={[0, 0.1, 0]}
                 fontSize={0.06}
                 color="#00FF94"
-                font="/fonts/Inter-Bold.woff"
                 anchorX="center"
                 anchorY="middle"
             >
@@ -67,6 +66,8 @@ const Hotspot = ({ position, label }: { position: [number, number, number], labe
 );
 
 export default function HeroGlobe() {
+    if (typeof window === "undefined") return null;
+
     return (
         <div className="w-full h-[700px] relative">
             <Canvas camera={{ position: [0, 0, 4], fov: 45 }}>

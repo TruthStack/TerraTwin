@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "vercel --token $VERCEL_TOKEN --prod --yes --confirm"
+    "deploy": "vercel --prod --yes --confirm"
   },
   "dependencies": {
     "@react-three/drei": "^9.97.0",
