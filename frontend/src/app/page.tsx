@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
-import HeroGlobe from "@/components/ui/HeroGlobe";
 import { ArrowRight, ShieldCheck, Zap, Globe, Cpu, Radio, Network } from "lucide-react";
+
+const HeroGlobe = dynamic(() => import("@/components/ui/HeroGlobe"), { ssr: false });
 
 const BOOT_LOGS = [
     "INITIALIZING_CORE_V1.4.0...",
